@@ -1,0 +1,11 @@
+{"if": {
+    "allOf": [{
+            "field": "Microsoft.DBforMariaDB/servers/sslEnforcement",
+            "notEquals": "Enabled"
+        }
+    ]
+},
+"then": {
+    "effect": "Audit"
+}
+}

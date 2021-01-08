@@ -1,0 +1,20 @@
+{
+    "properties": {
+        "mode":"all",
+        "displayName": "MariaDB Data encryption",
+        "policyType": "Custom",
+        "description": "This policy audits ",
+        "policyRule": {
+            "if": {
+                "allOf": [{
+                        "field": "Microsoft.DBforMariaDB/servers/sslEnforcement",
+                        "notEquals": "Enabled"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "Audit"
+            }
+        }
+    }
+ }
